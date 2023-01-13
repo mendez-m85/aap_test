@@ -15,7 +15,7 @@
         force_basic_auth: true
       register: results
 
-    - debug:
-        var: results
+    - name: Print the number
+    - debug: msg={{ results.url }}
        
    
