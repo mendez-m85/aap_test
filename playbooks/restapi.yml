@@ -13,4 +13,5 @@
         url_username: "{{ url_username }}"
         url_password: "{{ url_password }}" 
         force_basic_auth: true
+      register: login  
    
