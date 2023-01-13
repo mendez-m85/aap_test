@@ -16,6 +16,6 @@
       register: results
 
     - debug:
-        msg: "{{ results.stdout }}" 
+        var: results 
        
    
