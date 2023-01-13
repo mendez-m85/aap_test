@@ -13,7 +13,7 @@
         url_username: "{{ url_username }}"
         url_password: "{{ url_password }}" 
         force_basic_auth: true
-      register: results
+      register: results.stdout
 
     - debug:
         var: results.stdout  
