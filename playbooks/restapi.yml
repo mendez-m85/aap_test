@@ -16,5 +16,5 @@
       register: results
 
     - name: Print the number
-      debug: msg={{ results.url }}
-      loop: "{{ results.url }}"
+      debug: msg={{ results.url.0 }}
+      
