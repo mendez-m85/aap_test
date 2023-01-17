@@ -17,6 +17,12 @@
 
     - name: Print the number
       debug: msg={{ results.url }}
-      loop: "{{[ relults.url]}}"
+    
+    - name: Register loop output as a variable
+      shell: "echo {{ item }}"
+      loop:
+        - "one"
+        - "two"
+      register: echo
      
         
