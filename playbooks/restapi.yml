@@ -16,6 +16,6 @@
       register: results
 
     - name: Print the number
-      debug: msg={{ results.url | regex_search('.*CHG0030138.*') }}
+      debug: msg={{ results.url | regex_findall('.*CHG0030138.*') }}
        
    
