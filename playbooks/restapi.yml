@@ -17,5 +17,6 @@
 
     - name: Print the number
       debug: msg={{ results.url }}
+      loop: "{{[ relults.url]}}"
      
         
