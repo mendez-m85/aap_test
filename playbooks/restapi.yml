@@ -17,5 +17,10 @@
 
     - name: Print the number
       debug: msg={{ results.url }}
+
+    - name: Extract the URL
+      set_fact:
+      results: "{{ results.url | replace('https://ven02986.service-now.com/api/now/table/change_request?sysparm_limit=1&number=') }}"
        
-   
+    - debug: 
+        msg: "{{ results }}"
