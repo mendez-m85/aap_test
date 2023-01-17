@@ -20,4 +20,4 @@
 
      - name: "display the content of the 'out' variable, matching 'Two'"
        debug: 
-         msg: "{{ out.url | regex_findall('.*CHG0030138.*', ignorecase=True) }}" 
+         msg: "{{ results.url | regex_findall('.*CHG0030138.*', ignorecase=True) }}" 
