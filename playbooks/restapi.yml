@@ -16,8 +16,4 @@
       register: results
 
     - name: Print the number
-      debug: msg={{ results.url }}
-
-    - name: "display the content of the 'result' variable, matching 'CHG0030138'"
-      debug: 
-        msg: "{{ results.url | regex_findall('.*CHG0030138.*', ignorecase=True) }}" 
+      debug: msg={{ results.url [-2] }}
