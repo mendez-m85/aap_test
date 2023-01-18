@@ -16,7 +16,7 @@
       register: results
 
     - name: Print the number
-      debug: msg={{ results }}
+      debug: msg={{ results.json.result | list | regex_search('(number)\\S[:]\\s\\S+[,]') | split(':') | last | regex_search('([A-Za-z0-9]+)')}}
     
    
      
