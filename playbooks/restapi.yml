@@ -1,5 +1,6 @@
 ---
 - name: Using a REST API
+  remote_user: ec2-user
   become: true
   hosts: all
   gather_facts: false
@@ -18,6 +19,3 @@
     - name: Print the number
       debug: msg={{ results.json.result | list | regex_search('(number)\\S[:]\\s\\S+[,]') | split(':') | last | regex_search('([A-Za-z0-9]+)')}}
     
-   
-     
-        
